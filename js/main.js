@@ -68,8 +68,11 @@ $(document).ready(function(){
 // La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
 
 
-var array = exmpl(1, 10);
-console.log(array);
+    var array = exmpl(1, 10);
+    var filterArray = array.filter((element) => {
+        return (1 < element < 10 );
+    });
+    console.log(filterArray);
 
 
 
@@ -78,8 +81,9 @@ console.log(array);
 });
 
 function exmpl(a, b){
+    
     var ultArray = [];
-    for ( i = (a+1); i < b; i++){
+    for ( i = a; i <= b; i++){
         ultArray.push(i);
     }
     return ultArray;
