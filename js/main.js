@@ -70,7 +70,7 @@ $(document).ready(function(){
 
     var array = exmpl(1, 10);
     var filterArray = array.filter((element) => {
-        return (1 < element < 10 );
+        return element > 1 && element < 10;
     });
     console.log(filterArray);
 
