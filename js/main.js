@@ -67,12 +67,9 @@ $(document).ready(function(){
 // Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
 // La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
 
-
-    var array = exmpl(1, 10);
-    var filterArray = array.filter((element) => {
-        return element > 1 && element < 10;
-    });
-    console.log(filterArray);
+    var nArray = [1,2,3,4,5,6,7,8,9,10];
+    
+    console.log(exmpl(nArray, 1, 10));
 
 
 
@@ -80,13 +77,10 @@ $(document).ready(function(){
 
 });
 
-function exmpl(a, b){
-    
-    var ultArray = [];
-    for ( i = a; i <= b; i++){
-        ultArray.push(i);
-    }
-    return ultArray;
+function exmpl(array, a, b) {   
+    const filtered = array.filter((element) => {
+        return element > a && element < b;
+    }); return filtered;
 };
                           
 function rdmNum(max, min){
